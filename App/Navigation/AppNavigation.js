@@ -12,7 +12,10 @@ import DrawerItems from './DrawerItems';
 import styles from './Styles/NavigationStyles';
 
 const Timeline = createDrawerNavigator(
-  { Timeline: { screen: TimelineScreen } },
+  {
+    Timeline: { screen: TimelineScreen },
+    // SupportFAQ: { screen: SupportFAQ },
+  },
   {
     /* eslint-disable react/jsx-props-no-spreading */
     contentComponent: props => <DrawerItems {...props} />,

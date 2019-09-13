@@ -6,12 +6,12 @@ import { Button } from 'react-native-paper';
 import XploriColor from '../Themes/Colors';
 
 function XButton(props) {
-  const { disabled, title, color, textColor, onPress } = props;
+  const { disabled, title, color, textColor, onPress, btnStyles } = props;
 
   return (
     <Button
       mode="contained"
-      style={styles.btn}
+      style={[styles.btn, btnStyles]}
       disabled={disabled}
       color={color}
       onPress={onPress}
@@ -42,11 +42,13 @@ XButton.propTypes = {
   color: PropTypes.string,
   textColor: PropTypes.string,
   onPress: PropTypes.func,
+  btnStyles: PropTypes.object,
 };
 
 XButton.defaultProps = {
   disabled: false,
   color: XploriColor.primary,
+  btnStyles: {},
 };
 
 export default XButton;

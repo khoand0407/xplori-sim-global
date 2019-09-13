@@ -11,6 +11,7 @@ const images = {
   background: require('../Images/BgSignUp.jpg'),
   bgDrawer: require('../Images/BG_drawer.jpg'),
   avatar: require('../Images/avatar.jpg'),
+  beach: require('../Images/beach.jpg'),
   /* eslint-disable import/no-unresolved */
   // buttonBackground: require('../Images/button-bg.png'),
   // api: require('../Images/Icons/icon-api-testing.png'),

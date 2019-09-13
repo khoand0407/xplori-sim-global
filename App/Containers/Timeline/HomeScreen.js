@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, Alert } from 'react-native';
+import { View } from 'react-native';
 
 import XHeader from './XHeader';
-import * as Timer from '../../utils/Timer';
+
+import TimeLineScreen from './TimelineScreen';
+import EssentialsScreen from './EssentialsScreen';
 
 class Home extends React.PureComponent {
   /* eslint-disable no-undef */
@@ -24,13 +26,10 @@ class Home extends React.PureComponent {
     this.setState({ selectedTab: index });
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.props.navigation.setParams({
       onSelectTab: this.changeTab,
     });
-
-    await Timer.sleep(5000);
-    Alert.alert('hi');
   }
 
   render() {
@@ -38,7 +37,7 @@ class Home extends React.PureComponent {
 
     return (
       <View>
-        {selectedTab === 1 ? <Text>TIMELINE</Text> : <Text>ESSENTIALS</Text>}
+        {selectedTab === 1 ? <TimeLineScreen /> : <EssentialsScreen />}
       </View>
     );
   }
