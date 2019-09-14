@@ -16,6 +16,8 @@ const images = {
   weatherRainIcon: require('../Images/weather-rain.png'),
   mapCity: require('../Images/map1.jpg'),
   mapTranspot: require('../Images/transpot-map.gif'),
+  barcodeScan: require('../Images/barcode.png'),
+  simBarcode: require('../Images/sim-barcode.png'),
   /* eslint-disable import/no-unresolved */
   // buttonBackground: require('../Images/button-bg.png'),
   // api: require('../Images/Icons/icon-api-testing.png'),

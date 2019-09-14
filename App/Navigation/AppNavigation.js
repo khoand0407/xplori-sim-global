@@ -17,7 +17,7 @@ const Timeline = createDrawerNavigator(
   {
     Timeline: { screen: TimelineScreen },
     SupportFAQ: { screen: SupportFAQScreen },
-    YourSim: { screen: YourSimScreen },
+    yourSIM: { screen: YourSimScreen },
   },
   {
     /* eslint-disable react/jsx-props-no-spreading */
