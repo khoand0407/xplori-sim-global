@@ -74,7 +74,7 @@ class DrawerItems extends React.Component {
             ))}
           </Drawer.Section>
 
-          <Drawer.Section>
+          <Drawer.Section style={styles.logout}>
             <Drawer.Item
               label="Logout"
               theme={colors}
@@ -112,6 +112,9 @@ const styles = StyleSheet.create({
     left: '30%',
     marginTop: 20,
     fontWeight: 'bold',
+  },
+  logout: {
+    marginBottom: 20,
   },
 });
 
