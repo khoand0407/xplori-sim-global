@@ -27,6 +27,7 @@ export default class Header extends React.PureComponent {
       <Appbar.Header style={styles.header}>
         <Appbar.Action icon={icon} onPress={this.pressIcon} />
         <Appbar.Content title={title} style={styles.headerContent} />
+        {this.props.children}
       </Appbar.Header>
     );
   }
@@ -38,11 +39,13 @@ const styles = StyleSheet.create({
     elevation: 0,
     shadowOpacity: 0,
     borderBottomWidth: 0,
+    justifyContent: 'space-between',
   },
   headerContent: {
     fontWeight: 'bold',
     color: '#000',
   },
+  textAction: { marginRight: 5 },
 });
 
 Header.propTypes = {
@@ -50,6 +53,7 @@ Header.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   back: PropTypes.bool,
+  children: PropTypes.any,
 };
 
 Header.defaultProps = {

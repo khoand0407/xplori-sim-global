@@ -26,7 +26,15 @@ class SimRegis extends React.Component {
         back
         icon="arrow-back"
         title="SIM REGISTRATION"
-      />
+      >
+        <Button
+          uppercase={false}
+          color="#000"
+          onPress={() => navigation.goBack()}
+        >
+          Skip
+        </Button>
+      </Header>
     ),
   });
 
