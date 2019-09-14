@@ -42,7 +42,7 @@ class TimeLine extends React.Component {
 
   async componentDidMount() {
     // sleep 1s, show loading
-    await Timer.sleep(1200);
+    await Timer.sleep(1000);
 
     this.setState({ load: false });
   }

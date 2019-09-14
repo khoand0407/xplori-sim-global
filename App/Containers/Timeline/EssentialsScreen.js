@@ -1,9 +1,21 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { ScrollView } from 'react-native';
+
+import Weather from './Weather';
+import Map from './Map';
+import ExchangeRates from './ExchangeRates';
+import MediaEssential from './MediaEssential';
 
 class Essentials extends React.PureComponent {
   render() {
-    return <Text>Essentials</Text>;
+    return (
+      <ScrollView>
+        <Weather />
+        <Map />
+        <ExchangeRates />
+        <MediaEssential />
+      </ScrollView>
+    );
   }
 }
 

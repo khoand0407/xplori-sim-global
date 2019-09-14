@@ -12,6 +12,10 @@ const images = {
   bgDrawer: require('../Images/BG_drawer.jpg'),
   avatar: require('../Images/avatar.jpg'),
   beach: require('../Images/beach.jpg'),
+  bgWeather: require('../Images/bg_weather.jpg'),
+  weatherRainIcon: require('../Images/weather-rain.png'),
+  mapCity: require('../Images/map1.jpg'),
+  mapTranspot: require('../Images/transpot-map.gif'),
   /* eslint-disable import/no-unresolved */
   // buttonBackground: require('../Images/button-bg.png'),
   // api: require('../Images/Icons/icon-api-testing.png'),
