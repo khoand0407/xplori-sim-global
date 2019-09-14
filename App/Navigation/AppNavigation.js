@@ -7,6 +7,7 @@ import {
 import LaunchScreen from '../Containers/SignIn/LaunchScreen';
 import TimelineScreen from '../Containers/Timeline/TimelineNav';
 import SupportFAQScreen from '../Containers/SupportFAQ/SupportFAQScreen';
+import YourSimScreen from '../Containers/YourSIM/YourSimScreen';
 
 import DrawerItems from './DrawerItems';
 
@@ -16,6 +17,7 @@ const Timeline = createDrawerNavigator(
   {
     Timeline: { screen: TimelineScreen },
     SupportFAQ: { screen: SupportFAQScreen },
+    YourSim: { screen: YourSimScreen },
   },
   {
     /* eslint-disable react/jsx-props-no-spreading */

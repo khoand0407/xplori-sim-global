@@ -10,11 +10,15 @@ function Banner(props) {
 
   return (
     <View style={styles.wrap}>
-      <View style={styles.bannerContent}>
+      <View style={[styles.bannerContent, styles.shawdow]}>
         <Caption style={styles.caption}>Wallet Balance</Caption>
         <View style={styles.actionTopup}>
-          <Headline style={styles.headeLine}>$ 12,00</Headline>
-          <Surface style={styles.surface}>
+          <View style={styles.wrapMoney}>
+            <Headline style={styles.symboy}>$</Headline>
+            <Headline style={styles.headeLine}>12,00</Headline>
+          </View>
+
+          <Surface style={[styles.surface, styles.shawdow]}>
             <XButton
               title="TOP-UP"
               onPress={hideBanner}
@@ -46,17 +50,24 @@ class XTopUp extends React.Component {
   render() {
     const { visible } = this.state;
 
-    return visible ? (
-      <Surface style={styles.surface}>
-        <Banner hideBanner={this.onPress} />
-      </Surface>
-    ) : null;
+    return visible ? <Banner hideBanner={this.onPress} /> : null;
   }
 }
 
 const styles = StyleSheet.create({
+  shawdow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+  },
+  symboy: { marginLeft: 10, fontWeight: 'bold' },
+  wrapMoney: { flexDirection: 'row' },
   surface: {
-    elevation: 4,
+    elevation: 3,
   },
   bannerContent: {
     borderRadius: 8,
@@ -77,7 +88,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   btn: { flex: 1, paddingHorizontal: 15 },
-  headeLine: { fontSize: 36, paddingTop: 10, marginLeft: 10, marginRight: 70 },
+  headeLine: {
+    fontWeight: 'bold',
+    fontSize: 40,
+    paddingTop: 10,
+    marginLeft: 10,
+    marginRight: 70,
+  },
   wrap: { backgroundColor: '#F5F7FA' },
 });
 
