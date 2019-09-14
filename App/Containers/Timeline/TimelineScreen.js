@@ -57,7 +57,7 @@ class TimeLine extends React.Component {
   render() {
     const { load } = this.state;
     return (
-      <View>
+      <View style={styles.container}>
         {load ? (
           <Loader />
         ) : (

@@ -6,9 +6,13 @@ import { Appbar } from 'react-native-paper';
 
 import HomeScreen from './HomeScreen';
 import TopupScreen from '../Topup/TopupScreen';
+import OrderSimScreen from '../Topup/OrderSimScreen';
+import CheckOutScreen from '../Topup/CheckoutScreen';
 
 export const examples = {
   topUp: TopupScreen,
+  orderSim: OrderSimScreen,
+  checkout: CheckOutScreen,
 };
 
 const routes = Object.keys(examples)

@@ -47,12 +47,17 @@ class TopupScreen extends React.Component {
     this.state = { checked: [false, false, false] };
 
     this.check = this.check.bind(this);
+    this.nextPage = this.nextPage.bind(this);
   }
 
   check(index) {
     const checks = [false, false, false];
     checks[index] = !checks[index];
     this.setState({ checked: checks });
+  }
+
+  nextPage() {
+    this.props.navigation.navigate('orderSim');
   }
 
   render() {
@@ -90,13 +95,18 @@ class TopupScreen extends React.Component {
           </View>
         </Surface>
 
-        <XButton title="Continue" btnStyles={styles.btn} />
+        <XButton
+          title="Continue"
+          btnStyles={styles.btn}
+          onPress={this.nextPage}
+        />
       </ScrollView>
     );
   }
 }
 TopupScreen.propTypes = {
   theme: PropTypes.object,
+  navigation: PropTypes.object,
 };
 
 const styles = StyleSheet.create({
