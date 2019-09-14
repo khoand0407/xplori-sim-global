@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   },
   btn: { flex: 1, paddingHorizontal: 15 },
   headeLine: { fontSize: 36, paddingTop: 10, marginLeft: 10, marginRight: 70 },
-  wrap: { backgroundColor: '#E7EBF0' },
+  wrap: { backgroundColor: '#F5F7FA' },
 });
 
 export default XTopUp;

@@ -7,7 +7,7 @@ import { Appbar, Text } from 'react-native-paper';
 import HomeScreen from './HomeScreen';
 
 export const examples = {
-  SupportFAQ: () => <Text>SupportFAQ</Text>,
+  ChildRoute: () => <Text>SupportFAQ</Text>,
 };
 
 const routes = Object.keys(examples)

@@ -6,6 +6,7 @@ import {
 } from 'react-navigation';
 import LaunchScreen from '../Containers/SignIn/LaunchScreen';
 import TimelineScreen from '../Containers/Timeline/TimelineNav';
+import SupportFAQScreen from '../Containers/SupportFAQ/SupportFAQScreen';
 
 import DrawerItems from './DrawerItems';
 
@@ -14,7 +15,7 @@ import styles from './Styles/NavigationStyles';
 const Timeline = createDrawerNavigator(
   {
     Timeline: { screen: TimelineScreen },
-    // SupportFAQ: { screen: SupportFAQ },
+    SupportFAQ: { screen: SupportFAQScreen },
   },
   {
     /* eslint-disable react/jsx-props-no-spreading */
