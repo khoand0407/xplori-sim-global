@@ -4,12 +4,28 @@ import { StyleSheet } from 'react-native';
 import { Appbar } from 'react-native-paper';
 
 export default class Header extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.pressIcon = this.pressIcon.bind(this);
+  }
+
+  pressIcon() {
+    const { navigation, back } = this.props;
+
+    if (back) {
+      navigation.goBack();
+    } else {
+      navigation.openDrawer();
+    }
+  }
+
   render() {
-    const { navigation, title } = this.props;
+    const { title, icon } = this.props;
 
     return (
       <Appbar.Header style={styles.header}>
-        <Appbar.Action icon="subject" onPress={() => navigation.openDrawer()} />
+        <Appbar.Action icon={icon} onPress={this.pressIcon} />
         <Appbar.Content title={title} style={styles.headerContent} />
       </Appbar.Header>
     );
@@ -32,4 +48,11 @@ const styles = StyleSheet.create({
 Header.propTypes = {
   navigation: PropTypes.object,
   title: PropTypes.string,
+  icon: PropTypes.string,
+  back: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  icon: 'subject',
+  back: false,
 };

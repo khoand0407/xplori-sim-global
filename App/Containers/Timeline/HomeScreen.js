@@ -37,7 +37,13 @@ class Home extends React.PureComponent {
 
     return (
       <View>
-        {selectedTab === 1 ? <TimeLineScreen /> : <EssentialsScreen />}
+        {selectedTab === 1 ? (
+          /* eslint-disable react/jsx-props-no-spreading */
+          /** inject navigation to child screen */
+          <TimeLineScreen {...this.props} />
+        ) : (
+          <EssentialsScreen {...this.props} />
+        )}
       </View>
     );
   }

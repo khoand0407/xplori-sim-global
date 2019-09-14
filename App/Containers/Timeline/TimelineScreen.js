@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   ScrollView,
@@ -38,6 +39,8 @@ class TimeLine extends React.Component {
     this.state = {
       load: true,
     };
+
+    this.pressTopup = this.pressTopup.bind(this);
   }
 
   async componentDidMount() {
@@ -45,6 +48,10 @@ class TimeLine extends React.Component {
     await Timer.sleep(1000);
 
     this.setState({ load: false });
+  }
+
+  pressTopup() {
+    this.props.navigation.navigate('topUp');
   }
 
   render() {
@@ -55,7 +62,7 @@ class TimeLine extends React.Component {
           <Loader />
         ) : (
           <ScrollView>
-            <XTopUp />
+            <XTopUp onRedirectToTopUp={this.pressTopup} />
             <ImageBackground source={Images.beach} style={styles.mediaHead}>
               <View style={styles.wrapHeadline}>
                 <Headline style={styles.headLine}>Costa Rica</Headline>
@@ -96,6 +103,10 @@ class TimeLine extends React.Component {
     );
   }
 }
+
+TimeLine.propTypes = {
+  navigation: PropTypes.object,
+};
 
 const styles = StyleSheet.create({
   imageMediaItem: { width: 120, height: 83 },

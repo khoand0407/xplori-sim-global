@@ -40,6 +40,7 @@ class XTopUp extends React.Component {
 
   onPress() {
     this.setState({ visible: false });
+    this.props.onRedirectToTopUp();
   }
 
   render() {
@@ -79,5 +80,9 @@ const styles = StyleSheet.create({
   headeLine: { fontSize: 36, paddingTop: 10, marginLeft: 10, marginRight: 70 },
   wrap: { backgroundColor: '#F5F7FA' },
 });
+
+XTopUp.propTypes = {
+  onRedirectToTopUp: PropTypes.func,
+};
 
 export default XTopUp;

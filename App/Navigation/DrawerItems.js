@@ -12,7 +12,7 @@ const DrawerItemsData = [
     label: 'Notifications',
     icon: 'tab-unselected',
     key: 0,
-    route: 'Notify',
+    route: 'Timeline',
   },
   { label: 'Partner info', icon: 'people', key: 1, route: 'ParnerInfor' },
   { label: 'Your SIM', icon: 'sim-card', key: 2, route: 'YourSIM' },

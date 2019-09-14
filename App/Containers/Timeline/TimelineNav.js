@@ -2,12 +2,13 @@
 
 import * as React from 'react';
 import { createStackNavigator } from 'react-navigation';
-import { Appbar, Text } from 'react-native-paper';
+import { Appbar } from 'react-native-paper';
 
 import HomeScreen from './HomeScreen';
+import TopupScreen from '../Topup/TopupScreen';
 
 export const examples = {
-  ChildRoute: () => <Text>SupportFAQ</Text>,
+  topUp: TopupScreen,
 };
 
 const routes = Object.keys(examples)
@@ -20,7 +21,10 @@ const routes = Object.keys(examples)
     Screen.navigationOptions = props => ({
       header: (
         <Appbar.Header>
-          <Appbar.BackAction onPress={() => props.navigation.goBack()} />
+          <Appbar.Action
+            icon="arrow-back"
+            onPress={() => props.navigation.goBack()}
+          />
           <Appbar.Content title={Comp.title} />
         </Appbar.Header>
       ),
