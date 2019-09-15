@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  ScrollView,
-  ImageBackground,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import { View, ScrollView, ImageBackground, StyleSheet } from 'react-native';
 import { List, Title, Caption, Headline, Button } from 'react-native-paper';
 
 import * as Timer from '../../utils/Timer';
 import Loader from '../../Components/Loader';
 import XTopUp from '../../Components/XTopUp';
 import { Images } from '../../Themes';
+
+import { screenWidth } from '../../utils/measure';
+
 const datas = [
   {
     id: 1,
@@ -30,7 +27,6 @@ const datas = [
     date: '21/02/2019',
   },
 ];
-const screenWidth = Math.round(Dimensions.get('window').width);
 
 class TimeLine extends React.Component {
   constructor(props) {
@@ -77,7 +73,7 @@ class TimeLine extends React.Component {
             </ImageBackground>
             <List.Section>
               <List.Subheader>News & Video</List.Subheader>
-              {datas.map(data => (
+              {datas.map((data, index) => (
                 <List.Item
                   key={data.id}
                   right={props => (
@@ -90,7 +86,7 @@ class TimeLine extends React.Component {
                   left={props => (
                     <ImageBackground
                       {...props}
-                      source={Images.avatar}
+                      source={{ uri: `https://picsum.photos/70${index}` }}
                       style={styles.imageMediaItem}
                     />
                   )}

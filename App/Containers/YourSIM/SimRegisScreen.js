@@ -5,7 +5,6 @@ import {
   StyleSheet,
   ScrollView,
   ImageBackground,
-  Dimensions,
   TextInput,
 } from 'react-native';
 import { Surface, Caption, Button } from 'react-native-paper';
@@ -15,7 +14,7 @@ import XButton from '../../Components/XButton';
 import { Images } from '../../Themes';
 import Colors from '../../Themes/Colors';
 
-const screenWidth = Math.round(Dimensions.get('window').width);
+import { screenWidth } from '../../utils/measure';
 
 class SimRegis extends React.Component {
   /* eslint-disable no-undef */

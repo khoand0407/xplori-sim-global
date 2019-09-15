@@ -14,7 +14,7 @@ const DrawerItemsData = [
     key: 0,
     route: 'Timeline',
   },
-  { label: 'Partner info', icon: 'people', key: 1, route: 'ParnerInfor' },
+  { label: 'Partner info', icon: 'people', key: 1, route: 'PartnerInfor' },
   { label: 'Your SIM', icon: 'sim-card', key: 2, route: 'yourSIM' },
   {
     label: 'Packages & Order',

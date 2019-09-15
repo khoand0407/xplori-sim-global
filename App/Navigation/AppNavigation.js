@@ -8,6 +8,7 @@ import LaunchScreen from '../Containers/SignIn/LaunchScreen';
 import TimelineScreen from '../Containers/Timeline/TimelineNav';
 import SupportFAQScreen from '../Containers/SupportFAQ/SupportFAQScreen';
 import YourSimScreen from '../Containers/YourSIM/YourSimScreen';
+import ParnerInforScreen from '../Containers/PartnerInfor/ParnerInforScreen';
 
 import DrawerItems from './DrawerItems';
 
@@ -18,6 +19,7 @@ const Timeline = createDrawerNavigator(
     Timeline: { screen: TimelineScreen },
     SupportFAQ: { screen: SupportFAQScreen },
     yourSIM: { screen: YourSimScreen },
+    PartnerInfor: { screen: ParnerInforScreen },
   },
   {
     /* eslint-disable react/jsx-props-no-spreading */

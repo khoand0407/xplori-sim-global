@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Dimensions } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {
   Placeholder,
   PlaceholderMedia,
@@ -7,7 +7,8 @@ import {
   Fade,
 } from 'rn-placeholder';
 
-const screenWidth = Math.round(Dimensions.get('window').width);
+import { screenWidth } from '../utils/measure';
+
 const items = [1, 2, 3];
 
 const LoadableUI = () => (

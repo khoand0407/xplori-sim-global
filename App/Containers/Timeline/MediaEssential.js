@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SafeAreaView, View, FlatList, StyleSheet, Text } from 'react-native';
+import {
+  SafeAreaView,
+  FlatList,
+  StyleSheet,
+  Text,
+  ImageBackground,
+} from 'react-native';
 import { Caption } from 'react-native-paper';
 
 const DATA = [
@@ -28,9 +34,12 @@ const DATA = [
 
 function Item({ title }) {
   return (
-    <View style={styles.item}>
+    <ImageBackground
+      source={{ uri: 'https://picsum.photos/703' }}
+      style={styles.item}
+    >
       <Text style={styles.title}>{title}</Text>
-    </View>
+    </ImageBackground>
   );
 }
 Item.propTypes = {
