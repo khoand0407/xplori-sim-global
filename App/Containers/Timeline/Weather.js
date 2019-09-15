@@ -128,8 +128,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   groupItem: { justifyContent: 'center' },
-  styleNum: { fontSize: 18, lineHeight: 15 },
-  styleDe: { fontSize: 12, lineHeight: 12 },
+  styleNum: { fontSize: 16, lineHeight: 13, fontWeight: 'bold' },
+  styleDe: { fontSize: 10, lineHeight: 12, fontWeight: 'bold' },
   wrapListItem: { flexDirection: 'row' },
   border: {
     borderLeftWidth: 0.8,
