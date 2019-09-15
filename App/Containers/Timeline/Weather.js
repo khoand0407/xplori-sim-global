@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   txtLocation: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
   // item
   weatherItemIcon: { color: '#fff', fontSize: 50 },
-  date: { color: '#fff' },
+  date: { color: '#fff', fontSize: 18 },
   rangeWaether: { flexDirection: 'row' },
   spaceBetween: { marginHorizontal: 10 },
   wrapWeatherItem: {
@@ -132,10 +132,10 @@ const styles = StyleSheet.create({
   styleDe: { fontSize: 10, lineHeight: 12, fontWeight: 'bold' },
   wrapListItem: { flexDirection: 'row' },
   border: {
-    borderLeftWidth: 0.8,
-    borderRightWidth: 0.8,
+    borderLeftWidth: 1.2,
+    borderRightWidth: 1.2,
     borderColor: '#B2B5B9',
-    paddingHorizontal: 8,
+    paddingHorizontal: 10,
   },
 });
 
